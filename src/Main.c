@@ -18,7 +18,7 @@ void Setup(AlxWindow* w){
 }
 
 void Update(AlxWindow* w){
-	tv.ZoomSpeed = 10.0f * w->ElapsedTime;
+	tv.ZoomSpeed = 5.0f * w->ElapsedTime;
 	TransformedView_HandlePanZoom(&tv,window.Strokes,GetMouse());
 
 	Clear(BLACK);
@@ -53,7 +53,7 @@ void Delete(AlxWindow* w){
 }
 
 int main(){
-    if(Create("SN 2D",2500,1200,1,1,Setup,Update,Delete))
+    if(Create("SN 2D",1200,800,2,2,Setup,Update,Delete))
         Start();
     return 0;
 }
